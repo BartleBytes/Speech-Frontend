@@ -20,7 +20,7 @@ function RegistrationForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://your-backend-url.onrender.com/api/register', {
+      const response = await fetch('https://render.com/docs/web-services#port-binding', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
