@@ -20,7 +20,7 @@ function RegistrationForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://render.com/docs/web-services#port-binding', {
+      const response = await fetch('https://speech-backend-8gjb.onrender.com/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
