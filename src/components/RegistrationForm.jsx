@@ -20,7 +20,7 @@ function RegistrationForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://speech-backend-8gjb.onrender.com/', {
+      const response = await fetch('https://speech-backend-8gjb.onrender.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
