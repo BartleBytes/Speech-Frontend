@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/RegistrationForm.module.css';
 
+
 function RegistrationForm() {
   const [formData, setFormData] = useState({
     childName: '',
@@ -10,6 +11,7 @@ function RegistrationForm() {
     email: '',
   });
 
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -18,6 +20,7 @@ function RegistrationForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch('https://speech-backend-8gjb.onrender.com/api/register', {
@@ -30,6 +33,12 @@ function RegistrationForm() {
 
       if (response.ok) {
         console.log('Registration successful!');
+        setFormData({
+          childName: '',
+          age: '',
+          parentName: '',
+          email: '',
+        });
         navigate('/thank-you');
       } else {
         console.error('Registration failed');
@@ -38,6 +47,8 @@ function RegistrationForm() {
     } catch (error) {
       console.error('Error connecting to backend:', error);
       alert('Server error. Please try again later.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -45,10 +56,12 @@ function RegistrationForm() {
   return (
     <div className={styles.container}>
       <h1>Speech Camp Registration</h1>
-      <form onSubmit={handleSubmit} className={styles.form}>
+      {loading && <div className={styles.spinner}></div>}
+
+      <form onSubmit={handleSubmit} className={`${styles.form} ${loading ? styles.loading : ''}`}>
         <label>
           Child&apos;s Name:
-          <input type="text" name="childName" onChange={handleChange} required />
+          <input type="text" name="childName" value={formData.childName} onChange={handleChange} required />
         </label>
         <label>
           Age:
@@ -62,7 +75,7 @@ function RegistrationForm() {
           Email:
           <input type="email" name="email" onChange={handleChange} required />
         </label>
-        <button type="submit">Register</button>
+        <button type="submit" disabled={loading}>{loading ? 'Submit...':'Register'}</button>
       </form>
     </div>
   );

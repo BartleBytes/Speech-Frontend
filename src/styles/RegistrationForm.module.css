@@ -71,3 +71,8 @@ button:hover {
     padding: 2rem;
   }
 }
+
+.form.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
