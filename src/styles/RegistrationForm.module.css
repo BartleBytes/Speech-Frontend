@@ -41,7 +41,7 @@
 infoBox ul {
   list-style: none;
   padding-left: 0;
-  margin 0;
+  margin: 0;
   line-height: 1.7;
   color: #003366;
 }
@@ -56,7 +56,7 @@ infoBox a {
   font-weight: bold;
   color: #d9534f;
 }
-
+ 
 .form {
   display: flex;
   flex-direction: column;
