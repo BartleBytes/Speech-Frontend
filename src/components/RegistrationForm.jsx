@@ -54,30 +54,56 @@ function RegistrationForm() {
 
 
   return (
-    <div className={styles.container}>
-      <h1>Speech Camp Registration</h1>
-      {loading && <div className={styles.spinner}></div>}
+<div className={styles.container}>
+  <h1 className={styles.title}>Speech Camp Registration</h1>
 
-      <form onSubmit={handleSubmit} className={`${styles.form} ${loading ? styles.loading : ''}`}>
-        <label>
-          Child&apos;s Name:
-          <input type="text" name="childName" value={formData.childName} onChange={handleChange} required />
-        </label>
-        <label>
-          Age:
-          <input type="number" name="age" onChange={handleChange} required />
-        </label>
-        <label>
-          Parent Name:
-          <input type="text" name="parentName" onChange={handleChange} required />
-        </label>
-        <label>
-          Email:
-          <input type="email" name="email" onChange={handleChange} required />
-        </label>
-        <button type="submit" disabled={loading}>{loading ? 'Submit...':'Register'}</button>
-      </form>
+  <div className={styles.infoSection}>
+    <div className={styles.infoBox}>
+      <h2>What’s Included</h2>
+      <ul>
+        <li>✔ Daily small-group therapy with a licensed SLP</li>
+        <li>✔ All materials and themed activities</li>
+        <li>✔ Individualized feedback and carryover support</li>
+        <li>✔ End-of-week progress note and parent recommendations</li>
+      </ul>
     </div>
+
+    <div className={styles.infoBox}>
+      <h2>Registration Info</h2>
+      <ul>
+        <li>💲 Cost: <strong>$375 per child</strong></li>
+        <li>🗓 Register by: <strong>June 1st, 2025</strong></li>
+        <li>📝 To register: fill out the form below and complete payment via <a href="https://square.link/your-link" target="_blank" rel="noopener noreferrer">Square</a></li>
+      </ul>
+      <p className={styles.limitedSpots}>Limited spots available — secure your child’s place today!</p>
+    </div>
+  </div>
+
+  {loading && <div className={styles.spinner}></div>}
+
+  <form onSubmit={handleSubmit} className={`${styles.form} ${loading ? styles.loading : ''}`}>
+    <label>
+      Child&apos;s Name:
+      <input type="text" name="childName" value={formData.childName} onChange={handleChange} required />
+    </label>
+    <label>
+      Age:
+      <input type="number" name="age" onChange={handleChange} required />
+    </label>
+    <label>
+      Parent Name:
+      <input type="text" name="parentName" onChange={handleChange} required />
+    </label>
+    <label>
+      Email:
+      <input type="email" name="email" onChange={handleChange} required />
+    </label>
+    <button type="submit" disabled={loading}>
+      {loading ? 'Submitting...' : 'Register'}
+    </button>
+  </form>
+</div>
+
   );
 }
 

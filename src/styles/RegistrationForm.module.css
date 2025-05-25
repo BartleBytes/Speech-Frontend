@@ -1,6 +1,6 @@
 /* Container styles */
 .container {
-  max-width: 500px;
+  max-width: 720px;
   margin: 3rem auto;
   padding: 2.5rem;
   background-color: #e6f0fa; /* Light blue background */
@@ -9,6 +9,113 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.title{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #003366;
+}
+
+.infoSection {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.infoBox {
+  flex: 1 1 300px;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12 px;
+  border: 1px solid #cce0ff;
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.08);
+}
+
+.infoBox h2 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+infoBox ul {
+  list-style: none;
+  padding-left: 0;
+  margin 0;
+  line-height: 1.7;
+  color: #003366;
+}
+
+infoBox a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.limitedSpots {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #d9534f;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5 rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #003366;
+}
+
+input {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border: 1px solid #66a3ff;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow o.3s ease;
+}
+
+input:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 5px rgba(0, 86, 179, 0.4);
+  outline: none;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  .infoSection {
+    flex-direction: column;
+  }
+}
+
+.form.loading{
+  opacity: 0.5;
+  pointer-events: none;
+}
 /* Heading */
 .container h1 {
   text-align: center;
@@ -23,56 +130,3 @@
   gap: 1.5rem;
 }
 
-/* Label styles */
-label {
-  display: flex;
-  flex-direction: column;
-  font-weight: 600;
-  color: #003366; /* Strong blue-gray */
-}
-
-/* Input styles */
-input {
-  margin-top: 0.5rem;
-  padding: 0.75rem;
-  border: 1px solid #66a3ff; /* Soft blue */
-  border-radius: 6px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-input:focus {
-  border-color: #0056b3;
-  box-shadow: 0 0 5px rgba(0, 86, 179, 0.4);
-  outline: none;
-}
-
-/* Button styles */
-button {
-  padding: 0.75rem;
-  background-color: #007BFF;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Responsive design */
-@media (max-width: 600px) {
-  .container {
-    margin: 2rem 1rem;
-    padding: 2rem;
-  }
-}
-
-.form.loading {
-  opacity: 0.5;
-  pointer-events: none;
-}
