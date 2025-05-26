@@ -117,11 +117,12 @@ button:hover {
   pointer-events: none;
 }
 /* Heading */
-.container h1 {
+.container h1 h2 {
   text-align: center;
   margin-bottom: 2rem;
   color: #004080; /* Deep blue */
 }
+
 
 /* Form styles */
 .form {
