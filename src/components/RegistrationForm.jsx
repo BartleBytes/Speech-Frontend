@@ -101,10 +101,11 @@ function RegistrationForm() {
           </div>
 
           <div className={styles.infoBox}>
-            <h2>Registration Info</h2>
+            <h2>Sounds of Summer Articulation Camp Registration Info</h2>
             <ul>
               <li>💲 Cost: <strong>$375 per child</strong></li>
               <li>🗓 Register by: <strong>June 1st, 2025</strong></li>
+              <li>Small Group Speech Therapy hosted by Empower Speech Pathology Solutions at Rio Vista Recreation Center (West Brook Room) Tuesday-Friday.</li>
               <li>📝 To register: fill out the form below and complete payment via <a href="https://square.link/your-link" target="_blank" rel="noopener noreferrer">Square</a></li>
             </ul>
             <p className={styles.limitedSpots}>Limited spots available — secure your child’s place today!</p>
