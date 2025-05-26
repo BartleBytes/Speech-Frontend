@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/RegistrationForm.module.css';
+import empower from '../assets/empower.png';
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
@@ -85,6 +86,7 @@ function RegistrationForm() {
   return (
     <div className={styles.pageWrapper}>
       <div className={styles.container}>
+        <img src={empower} className={styles.logo} />
         <h1 className={styles.title}>Speech Camp Registration</h1>
 
         <div className={styles.infoSection}>

@@ -142,3 +142,8 @@ button:hover {
   font-size: 0.9rem;
   margin-top: 0.25rem;
 }
+
+.logo {
+  width: 60px; /* Adjust as needed */
+  height: auto;
+}
