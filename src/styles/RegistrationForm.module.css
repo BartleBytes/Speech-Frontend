@@ -1,17 +1,12 @@
 /* Container styles */
 .container {
-  height: 100vh;
-  width: 100vh;
-  margin: 0;
+  max-width: 720px;
+  margin: 3rem auto;
   padding: 2.5rem;
   background-color: #e6f0fa; /* Light blue background */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .title{
