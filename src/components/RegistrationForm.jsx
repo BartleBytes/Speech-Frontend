@@ -92,7 +92,7 @@ function RegistrationForm() {
     <div className={styles.pageWrapper}>
       <div className={styles.container}>
         <img src={empower} className={styles.logo} />
-        <h1 className={styles.title}>Speech Camp Registration</h1>
+        <h1 className={styles.title}>Sounds of Summer | Camp Registration</h1>
 
         <div className={styles.infoSection}>
           <div className={styles.infoBox}>
