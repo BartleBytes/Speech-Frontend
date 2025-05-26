@@ -54,6 +54,7 @@ function RegistrationForm() {
 
 
   return (
+ <div className={styles.pageWrapper}>
 <div className={styles.container}>
   <h1 className={styles.title}>Speech Camp Registration</h1>
 
@@ -84,26 +85,26 @@ function RegistrationForm() {
   <form onSubmit={handleSubmit} className={`${styles.form} ${loading ? styles.loading : ''}`}>
     <label>
       Child&apos;s Name:
-      <input type="text" name="childName" value={formData.childName} onChange={handleChange} required />
+      <input type="text" name="childName" value={formData.childName} onChange={handleChange} placeholder="e.g., Emma Johnson" required />
     </label>
     <label>
       Age:
-      <input type="number" name="age" onChange={handleChange} required />
+      <input type="number" name="age" onChange={handleChange} placeholder="# 2-5" required />
     </label>
     <label>
       Parent Name:
-      <input type="text" name="parentName" onChange={handleChange} required />
+      <input type="text" name="parentName" onChange={handleChange} placeholder="Parent Name" required />
     </label>
     <label>
       Email:
-      <input type="email" name="email" onChange={handleChange} required />
+      <input type="email" name="email" onChange={handleChange} placeholder="e.g., parent@gmail.com" required />
     </label>
     <button type="submit" disabled={loading}>
       {loading ? 'Submitting...' : 'Register'}
     </button>
   </form>
 </div>
-
+</div>
   );
 }
 
