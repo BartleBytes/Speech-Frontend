@@ -9,6 +9,7 @@ function RegistrationForm() {
     age: '',
     parentName: '',
     email: '',
+    goals: '',
   });
 
   const [errors, setErrors] = useState({});
@@ -39,6 +40,10 @@ function RegistrationForm() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       newErrors.email = 'Enter a valid email address.';
+    }
+
+    if (!formData.goals.trim()) {
+      newErrors.goals = 'Speech/language goals or concerns is required'
     }
 
     setErrors(newErrors);
@@ -165,6 +170,20 @@ function RegistrationForm() {
               required
             />
             {errors.email && <p className={styles.error}>{errors.email}</p>}
+          </label>
+
+          <label>
+            Speech/Language Goals or Concerns:
+            <textarea
+              name="goals"
+              value={formData.goals}
+              onChange={handleChange}
+              placeholder="Describe any concerns or goals"
+              rows={4}
+              required
+              className={styles.input}
+              />
+              {errors.goals && <p className={styles.error}>{errors.goals}</p>}
           </label>
 
           <button type="submit" disabled={loading}>
