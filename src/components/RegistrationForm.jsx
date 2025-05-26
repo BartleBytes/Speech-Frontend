@@ -111,7 +111,7 @@ function RegistrationForm() {
             <ul>
               <li>💲 Cost: <strong>$375 per child</strong></li>
               <li>🗓 Register by: <strong>June 1st, 2025</strong></li>
-              <li>📝 To register: fill out the form below and complete payment via <a href="https://square.link/your-link" target="_blank" rel="noopener noreferrer">Square</a></li>
+              <li>📝 To register: fill out the form below and complete payment via <a href="https://checkout.square.site/merchant/ML38T5QEZB7H5/checkout/54DLLDJ4KT3FD6WQHNVD2OJP?src=sheet" target="_blank" rel="noopener noreferrer">Square</a></li>
             </ul>
             <p className={styles.limitedSpots}>Limited spots available — secure your child’s place today!</p>
           </div>
