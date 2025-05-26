@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from '../styles/RegistrationForm.module.css';
-import empower from '../assets/empower.png';
+import empower from '../assets/asset/empower.png';
 
 function RegistrationForm() {
   const [formData, setFormData] = useState({
