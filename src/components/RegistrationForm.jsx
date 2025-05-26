@@ -28,8 +28,8 @@ function RegistrationForm() {
     }
 
     const age = parseInt(formData.age, 10);
-    if (!formData.age || isNaN(age) || age < 2 || age > 5) {
-      newErrors.age = 'Age must be a number between 2 and 5.';
+    if (!formData.age || isNaN(age) || age < 3 || age > 15) {
+      newErrors.age = 'Age must be a number between 3 and 15.';
     }
 
     if (!formData.parentName.trim()) {
@@ -134,7 +134,7 @@ function RegistrationForm() {
               name="age"
               value={formData.age}
               onChange={handleChange}
-              placeholder="2–5"
+              placeholder="3–15"
               required
             />
             {errors.age && <p className={styles.error}>{errors.age}</p>}
